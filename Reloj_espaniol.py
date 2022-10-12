@@ -57,14 +57,8 @@ def time_to_text(hour, minute):
             texto += 'menos cinco'
     return texto        
 
-current = input("Ingrese una hora en formato hora:minutos : ")
-if (current == ""):
-    current = datetime.now()
-    hour = current.hour
-    minute = current.minute
-else:
-    current = current.split(":")
-    hour = current[0]
-    minute = current[1]
+current = datetime.now()
+hour = current.hour
+minute = current.minute
 texto = time_to_text(int(hour), int(minute))
 print(f'{hour}:{minute} Son {texto}')
